@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkehwbjx8iemc"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_sji54"]
+[ext_resource type="Texture2D" uid="uid://clpxtfeii00g1" path="res://spr/aircraft.png" id="1_whf6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahbxj"]
+size = Vector2(7.00003, 7.99997)
+
+[node name="Player" type="CharacterBody2D"]
+rotation = -1.5708
+script = ExtResource("1_sji54")
+metadata/rotation = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("1_whf6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.81e-06)
+shape = SubResource("RectangleShape2D_ahbxj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

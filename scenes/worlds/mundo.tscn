@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnspparpogtw0"]
+
+[ext_resource type="PackedScene" uid="uid://dkehwbjx8iemc" path="res://scenes/objects/Player.tscn" id="1_27h00"]
+[ext_resource type="Texture2D" uid="uid://bbahxf6277jt" path="res://icon.svg" id="3_2akdf"]
+[ext_resource type="PackedScene" uid="uid://dmwtn1k1kib5j" path="res://scenes/objects/Enemy.tscn" id="3_g4ojl"]
+
+[node name="Mundo" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_27h00")]
+position = Vector2(38, 80)
+
+[node name="Icon" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(43, 79)
+scale = Vector2(0.765625, 1.3125)
+texture = ExtResource("3_2akdf")
+
+[node name="Enemy" parent="." instance=ExtResource("3_g4ojl")]
+position = Vector2(17, 43)
