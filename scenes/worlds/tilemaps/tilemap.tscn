@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bse8l4prxi6lq"]
+
+[ext_resource type="Texture2D" uid="uid://b2xokyb4tgnec" path="res://spr/tiles/tilemap.png" id="1_lt2v1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wq6jj"]
+texture = ExtResource("1_lt2v1")
+texture_region_size = Vector2i(8, 8)
+0:1/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+3:0/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tmx7w"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_wq6jj")
+
+[node name="Tilemap" type="TileMapLayer"]
+z_index = -1
+texture_filter = 1
+tile_set = SubResource("TileSet_tmx7w")
+collision_enabled = false

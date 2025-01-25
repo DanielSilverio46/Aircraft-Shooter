@@ -2,20 +2,29 @@ extends Node2D
 
 const forward_spd = 30
 const low_spd = 15
-const rotation_spd = 0.001
-
+const rotation_spd = 0.05
 var recoil: bool = false
+
 var Bullet = preload("res://scenes/objects/comum_bullet.tscn")
+#var AnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+#	AnimatedSprite = get_node("AnimatedSprite2D")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_W):
+		$AnimatedSprite2D.visible = true
+		$AnimatedSprite2D.play()
+
 		translate(Vector2.from_angle(rotation) * forward_spd * delta)
 
+	else:
+		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.visible = false
+		
 	if Input.is_key_pressed(KEY_LEFT):
 		rotation -= rotation_spd
 

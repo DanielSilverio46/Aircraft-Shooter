@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clpxtfeii00g1"
-path="res://.godot/imported/aircraft.png-547c73877928140dfd97648c89c69d75.ctex"
+uid="uid://dg43h4lm80wdc"
+path="res://.godot/imported/Sprite-0002.png-84b5244f4e292f38ab15d7b5945448c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/aircraft.png"
-dest_files=["res://.godot/imported/aircraft.png-547c73877928140dfd97648c89c69d75.ctex"]
+source_file="res://spr/player/fires/comum/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-84b5244f4e292f38ab15d7b5945448c5.ctex"]
 
 [params]
 
