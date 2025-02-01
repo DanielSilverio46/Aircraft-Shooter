@@ -35,6 +35,14 @@ rotation = -1.5708
 script = ExtResource("1_sji54")
 metadata/rotation = 0.0
 
+[node name="LifeBar" type="ProgressBar" parent="."]
+offset_left = 9.0
+offset_top = -4.0
+offset_right = 13.0
+offset_bottom = 4.0
+step = 10.5
+show_percentage = false
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 rotation = 1.5708
